@@ -622,7 +622,7 @@ class FormularioVenta(QtGui.QWidget):
         c.drawString(10,alto-140,"NUM. CUENTA: "+
             controller_admin_producto.zerosAtLeft(self.num_documento,8))
         c.drawString(10,alto-155,
-            "---------------------------------------------------------")
+            "---------------------------------------------------------------------")
         if(int(self.mesa) == 0):
             c.drawString(10,alto-170,"COMPRA DIRECTA")
         else:
@@ -630,7 +630,7 @@ class FormularioVenta(QtGui.QWidget):
         c.drawString(10,alto-185,"CUENTA: "
             +controller_admin_producto.zerosAtLeft(self.num_documento,8))
         c.drawString(10,alto-200,
-            "---------------------------------------------------------")
+            "---------------------------------------------------------------------")
         alto_productos = alto-215
         for i,producto in enumerate(productos):
             c.drawString(10,alto_productos-15*i,str(producto.cantidad))
@@ -647,7 +647,7 @@ class FormularioVenta(QtGui.QWidget):
         except:
             fin_alto_productos = alto_productos
         c.drawString(10,fin_alto_productos-15,
-            "---------------------------------------------------------")
+            "---------------------------------------------------------------------")
         fin_alto_productos = fin_alto_productos - 30
 
         c.drawString(120,fin_alto_productos-15,"CONSUMO: ")
@@ -669,10 +669,10 @@ class FormularioVenta(QtGui.QWidget):
                 controller_admin_producto.monetaryFormat(int(self.total))))
 
             c.drawString(10,fin_alto_productos-115,"Gracias por su visita.")
-            c.drawString(20,fin_alto_productos-145, "***Ticket no valido como boleta***")
+            c.drawString(20,fin_alto_productos-145, "            ***Ticket no valido como boleta***")
         else:
             c.drawString(10,fin_alto_productos-75,"Gracias por su visita.")
-            c.drawString(20,fin_alto_productos-105, "***Ticket no valido como boleta***")
+            c.drawString(20,fin_alto_productos-105, "            ***Ticket no valido como boleta***")
 
 
         c.save()
