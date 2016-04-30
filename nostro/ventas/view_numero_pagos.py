@@ -238,6 +238,14 @@ class NumeroPagos(QtGui.QDialog):
         for i,combobox in enumerate(self.list_combobox,1):
             lista.append(combobox.currentIndex()-1)
 
+            if(combobox.currentIndex() == 0 and self.ui.tableWidget_resumen.cellWidget(i-1,5).estado == 1):
+                self.ui.tableWidget_resumen.cellWidget(i-1,5).estado = 0
+                self.reload_data_table()
+                
+            if(combobox.currentIndex() != 0 and self.ui.tableWidget_resumen.cellWidget(i-1,5).estado == 0):
+                self.ui.tableWidget_resumen.cellWidget(i-1,5).estado = 1
+                self.reload_data_table()
+
         lista_suma = list()
         for i in range(0,self.n_pagos):
             suma = 0

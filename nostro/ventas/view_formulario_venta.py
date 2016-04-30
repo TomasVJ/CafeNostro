@@ -343,7 +343,10 @@ class FormularioVenta(QtGui.QWidget):
 
         self.subtotal = subtotal
         self.propina = subtotal * 0.1
-        self.total = subtotal * 1.1
+        aux = self.propina % 10
+        if (aux != 0):
+            self.propina = self.propina-aux
+        self.total = subtotal + self.propina
 
         self.ui.lcdNumber_subtotal.display(self.subtotal)
         self.ui.lcdNumber_propina.display(self.propina)
