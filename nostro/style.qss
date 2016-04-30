@@ -1,0 +1,163 @@
+QDialog#Dialog {
+    border-image: url(images/login.png);
+}
+QMainWindow {
+    border-image: url(images/main.png);
+}
+QProgressDialog{
+    border-image: url(images/fondoHD.png);
+}
+QGroupBox {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+QComboBox{
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: blue;
+    font: bold 14px "Calibri";
+    color: black(dark);
+    padding: 6px;
+}
+QGroupBox::title {
+    font: bold 14px "Calibri";
+    border-width: 10px;
+}
+QLabel{
+    font: bold 14px "Calibri";
+}
+QPushButton {
+    background-color: white;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: blue;
+    font: bold 14px "Calibri";
+    color: black(dark);
+    padding: 5px;
+}
+QPushButton:disabled {
+    background-color: white;
+    border-style: inset;
+    color: gray;
+}
+QPushButton:checked{
+    background-color: #4a46a4;
+    border-style: inset;
+}
+QPushButton:hover{
+    background-color: lightblue;
+}
+QPushButton:pressed{
+    background-color: #3333ff;
+    border-style: inset;
+    color: white;
+}
+QPushButton#pushButton_cerrar_venta{
+    font: bold 20px "Calibri"
+}
+QPushButton#pushButton_salir{
+    border-color: red;
+}
+QPushButton#pushButton_salir:hover{
+    background-color: #ff9999;
+}
+QPushButton#pushButton_salir:pressed{
+    background-color: red;
+    border-style: inset;
+    color: white;
+}
+
+PushButtonMesa{
+    border-color: #006600;
+    background-color: white;
+}
+PushButtonMesa:hover{
+    background-color: #33ff33;
+}
+PushButtonMesa:pressed{
+    background-color: #00b300;
+}
+PushButtonMesa:disabled{
+    border-color: gray;
+}
+PushButtonMesa:checked{
+    background-color: #59bc41;
+    border-style: inset;
+}
+PushButtonMesa[ocupado='true']{
+    border-color: red;
+    background-color: white;
+}
+PushButtonMesa:hover[ocupado='true']{
+    background-color: #ff9999;
+}
+PushButtonMesa:pressed[ocupado='true']{
+    background-color: #ff1a1a;
+}
+PushButtonMesa:disabled[ocupado='true']{
+    border-color: gray;
+}
+PushButtonMesa:checked[ocupado='true']{
+    background-color: #a44242;
+    border-style: inset;
+}
+QLabel#label_login{
+    color: black;
+    font: bold 30px "Calibri";
+}
+QLabel#label_info{
+    color: red;
+    font: bold 20px "Calibri";
+}
+
+
+
+/* navigation bar */
+QCalendarWidget QWidget#qt_calendar_navigationbar { background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); }
+QCalendarWidget QToolButton {
+/*    height: 60px;
+    width: 150px;*/
+    color: white;
+/*    font-size: 24px;
+    icon-size: 56px, 56px;*/
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333);
+}
+QCalendarWidget QMenu {
+/*    width: 150px;
+    left: 20px;*/
+    color: black;
+/*    font-size: 18px;*/
+    background-color: white;
+}
+QCalendarWidget QSpinBox { 
+/*    width: 150px; 
+    font-size:24px;*/ 
+    color: white; 
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #cccccc, stop: 1 #333333); 
+    selection-background-color: rgb(136, 136, 136);
+    selection-color: rgb(255, 255, 255);
+}
+/*QCalendarWidget QSpinBox::up-button { subcontrol-origin: border;  subcontrol-position: top right;  width:65px; }
+QCalendarWidget QSpinBox::down-button {subcontrol-origin: border; subcontrol-position: bottom right;  width:65px;}
+QCalendarWidget QSpinBox::up-arrow { width:56px;  height:56px; }
+QCalendarWidget QSpinBox::down-arrow { width:56px;  height:56px; }*/
+ 
+/* header row */
+QCalendarWidget QWidget { alternate-background-color: rgb(128, 128, 128); }
+ 
+/* normal days */
+QCalendarWidget QAbstractItemView:enabled 
+{
+/*    font-size:24px;  */
+    color: black;  
+    background-color: white;  
+    selection-background-color: rgb(64, 64, 64); 
+    selection-color: rgb(0, 255, 0); 
+}
+ 
+/* days in other months */
+QCalendarWidget QAbstractItemView:disabled { color: rgb(64, 64, 64); }

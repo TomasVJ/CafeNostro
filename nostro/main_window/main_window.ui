@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>642</width>
+    <height>462</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CaféNostro</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>150</number>
+      </property>
+      <property name="topMargin">
+       <number>30</number>
+      </property>
+      <property name="bottomMargin">
+       <number>20</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_compra_directa">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Compra Directa</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_mesas">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Pedido por Mesas</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_usuario">
+        <property name="font">
+         <font>
+          <family>Calibri</family>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page_3"/>
+      <widget class="QWidget" name="page_4"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>642</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAdministraci_n">
+    <property name="statusTip">
+     <string>Sección administrativa de la aplicación</string>
+    </property>
+    <property name="title">
+     <string>&amp;Administración</string>
+    </property>
+    <addaction name="actionUsuarios"/>
+    <addaction name="actionProductos"/>
+    <addaction name="actionVentas"/>
+    <addaction name="actionEstadisticas"/>
+   </widget>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>&amp;Archivo</string>
+    </property>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuConfiguraci_n">
+    <property name="title">
+     <string>Configuración</string>
+    </property>
+    <addaction name="actionDatos_empresa"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuAdministraci_n"/>
+   <addaction name="menuConfiguraci_n"/>
+  </widget>
+  <action name="actionUsuarios">
+   <property name="text">
+    <string>&amp;Usuarios</string>
+   </property>
+   <property name="statusTip">
+    <string>Ingresa a la ventana de administración de usuarios</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionProductos">
+   <property name="text">
+    <string>&amp;Productos</string>
+   </property>
+   <property name="statusTip">
+    <string>Ingresa a la ventana de administración de productos</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+  </action>
+  <action name="actionRealizar_Venta">
+   <property name="text">
+    <string>&amp;Realizar Venta</string>
+   </property>
+   <property name="statusTip">
+    <string>Ingresa a la ventana donde se venden los productos del local</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+   <property name="statusTip">
+    <string>Cierra la aplicación</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
+  </action>
+  <action name="actionCambiar_Usuario">
+   <property name="text">
+    <string>Cambiar Usuario</string>
+   </property>
+   <property name="statusTip">
+    <string>Regresa a la ventan Login para poder cambiar el usuario</string>
+   </property>
+  </action>
+  <action name="actionVentas">
+   <property name="text">
+    <string>&amp;Ventas</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="actionEstadisticas">
+   <property name="text">
+    <string>Estadísticas</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
+  </action>
+  <action name="actionCambiar_datos_de_la_empresa">
+   <property name="text">
+    <string>Cambiar datos de la empresa</string>
+   </property>
+  </action>
+  <action name="actionDatos_empresa">
+   <property name="text">
+    <string>Datos empresa</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
